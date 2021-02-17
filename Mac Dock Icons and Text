@@ -97,3 +97,78 @@ Breakfast and lunch were incredible, but dinner feels like a well-earned reward 
 <span class="icons-header-text">6:15  Spa</span>
 After dinner the rest of the evening is yours to enjoy. It’s the perfect opportunity to visit the Spa and complete your recovery after a challenging but rewarding day of prioritizing yourself. A deep tissue massage sounds perfect right about now! And why not treat yourself and grab a skin-nourishing facial or body wrap, too?
 </div>
+
+
+
+
+
+<script>
+	
+//  The Program Page - Icons (Desktop)   //
+
+jQuery(function($){
+	$(document).ready(function(){
+		
+		$(' #icon-text-3, #icon-text-4, #icon-text-5, #icon-text-6, #icon-text-7, #icon-text-8, #icon-text-9, #icon-text-10, #icon-text-10, #icon-text-11, #icon-text-12').hide();
+
+			
+		$( "#icon-2" ).hover(function() {
+			$( '#icon-text-2' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-2" ).hide();
+			});	
+			
+		$( "#icon-3" ).hover(function() {
+			$( '#icon-text-3' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-3" ).hide();
+			});	
+				
+		$( "#icon-4" ).hover(function() {
+			$( '#icon-text-4' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-4" ).hide();
+			});	
+					
+		$( "#icon-5" ).hover(function() {
+			$( '#icon-text-5' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-5" ).hide();
+			});	
+		
+		$( "#icon-6" ).hover(function() {
+			$( '#icon-text-6' ).show();
+			$( '.icons-text-box>div div' ).not( "#icon-text-6" ).hide();
+			});	
+			
+		$( "#icon-7" ).hover(function() {
+			$( '#icon-text-7' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-7" ).hide();
+			});	
+			
+		$( "#icon-8" ).hover(function() {
+			$( '#icon-text-8' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-8" ).hide();
+			});	
+				
+		$( "#icon-9" ).hover(function() {
+			$( '#icon-text-9' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-9" ).hide();
+			});	
+					
+		$( "#icon-10" ).hover(function() {
+			$( '#icon-text-10' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-10" ).hide();
+			});	
+		
+		$( "#icon-11" ).hover(function() {
+			$( '#icon-text-11' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-11" ).hide();
+			});
+		
+		$( "#icon-12" ).hover(function() {
+			$( '#icon-text-12' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-12" ).hide();
+			});	
+		
+	});
+});
+</script> 
+
+
