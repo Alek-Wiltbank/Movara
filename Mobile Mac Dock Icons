@@ -62,3 +62,75 @@ Breakfast and lunch were incredible, but dinner feels like a well-earned reward 
 <span class="mobile-icons-header-text">Spa</span>
 After dinner the rest of the evening is yours to enjoy. It’s the perfect opportunity to visit the Spa and complete your recovery after a challenging but rewarding day of prioritizing yourself. A deep tissue massage sounds perfect right about now! And why not treat yourself and grab a skin-nourishing facial or body wrap, too?
 </div>
+
+
+
+
+<script>
+	
+//  The Program Page - Icons (Mobile)   //
+
+jQuery(function($){
+	$(document).ready(function(){
+		
+		$(' #mobile-icon-text-3, #mobile-icon-text-4, #mobile-icon-text-5, #mobile-icon-text-6, #mobile-icon-text-7, #mobile-icon-text-8, #mobile-icon-text-9, #mobile-icon-text-10, #mobile-icon-text-10, #mobile-icon-text-11, #mobile-icon-text-12').hide();
+
+			
+		$( "#mobile-icon-2" ).click(function() {
+			$( '#mobile-icon-text-2' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-2" ).hide();
+			});	
+			
+		$( "#mobile-icon-3" ).click(function() {
+			$( '#mobile-icon-text-3' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-3" ).hide();
+			});	
+				
+		$( "#mobile-icon-4" ).click(function() {
+			$( '#mobile-icon-text-4' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-4" ).fadeOut();
+			});	
+					
+		$( "#mobile-icon-5" ).hover(function() {
+			$( '#mobile-icon-text-5' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-5" ).hide();
+			});	
+		
+		$( "#mobile-icon-6" ).click(function() {
+			$( '#mobile-icon-text-6' ).fadeIn();
+			$( '.mobile-icons-text-box>div div' ).not( "#mobile-icon-text-6" ).hide();
+			});	
+			
+		$( "#mobile-icon-7" ).click(function() {
+			$( '#mobile-icon-text-7' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-7" ).hide();
+			});	
+			
+		$( "#mobile-icon-8" ).click(function() {
+			$( '#mobile-icon-text-8' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-8" ).hide();
+			});	
+				
+		$( "#mobile-icon-9" ).hover(function() {
+			$( '#mobile-icon-text-9' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-9" ).hide();
+			});	
+					
+		$( "#mobile-icon-10" ).click(function() {
+			$( '#mobile-icon-text-10' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-10" ).hide();
+			});	
+		
+		$( "#mobile-icon-11" ).click(function() {
+			$( '#mobile-icon-text-11' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-11" ).hide();
+			});
+		
+		$( "#mobile-icon-12" ).click(function() {
+			$( '#mobile-icon-text-12' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-12" ).hide();
+			});	
+		
+	});
+});
+</script> 
