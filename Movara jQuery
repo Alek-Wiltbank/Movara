@@ -1,0 +1,690 @@
+<script>
+	
+//     The Program Section     //
+	
+jQuery(function($){
+	$(document).ready(function(){
+		$('.hfb-movara-tabs-body-section').hide();	
+		$('#movara-program-tabs-row').css({ "width": "90%", });
+
+
+		$( "#hfb-movara-tabs-fitness-tab h4, #hfb-movara-tabs-fitness-tab h5" ).css({ "display":"none", });	
+		$( "#hfb-movara-tabs-nutrition-tab h4, #hfb-movara-tabs-nutrition-tab h5" ).css({ "display":"none", });
+		$( "#hfb-movara-tabs-education-tab h4, #hfb-movara-tabs-education-tab h5" ).css({ "display":"none", });
+		$( "#hfb-movara-tabs-recovery-tab h4, #hfb-movara-tabs-recovery-tab h5" ).css({ "display":"none", });	
+
+		
+		$( "#hfb-movara-tabs-tab-section" ).css({ "margin-bottom": "150px", });
+		$( "#hfb-movara-tabs-fitness-tab, #hfb-movara-tabs-nutrition-tab, #hfb-movara-tabs-education-tab, #hfb-movara-tabs-recovery-tab" ).css({ "transition-duration":"300ms", "padding-top":"200px","padding-bottom":"150px", });
+		$( "#hfb-movara-tabs-fitness-tab h3, #hfb-movara-tabs-nutrition-tab h3, #hfb-movara-tabs-education-tab h3, #hfb-movara-tabs-recovery-tab h3" ).css({ "text-shadow": "2px 2px 4px #000000", });
+		
+		
+		$( ".inactive-tab" ).click(function() {
+			$( "#hfb-movara-tabs-tab-section" ).css({ "margin-bottom": "0px", });
+			$( "#the-movara-experience-header-section" ).css({"display": "none",});
+			$( '#hfb-movara-tabs-tabs-column' ).css({ "grid-template-columns":"1fr 1fr 1fr 1fr", });
+			}); 
+		
+		
+		$( "#hfb-movara-tabs-fitness-tab" ).click(function() {
+			$( ".active-tab" ).addClass( "inactive-tab" ).removeClass( "active-tab" );
+			$( "#hfb-movara-tabs-fitness-tab" ).addClass( "active-tab" ).removeClass( "inactive-tab" );	
+			$( "#hfb-movara-tabs-fitness-section" ).fadeIn(300).css({"display": "block",});
+			$( ".not-fitness" ).hide().css({"display": "none",});
+			$( " #hfb-movara-tabs-tabs-column " ).css( { "grid-template-columns": "2fr 1fr 1fr 1fr", } );
+			$( "#hfb-movara-tabs-fitness-tab h3" ).css({ "display":"none", });	
+			$( "#hfb-movara-tabs-fitness-tab h4, #hfb-movara-tabs-fitness-tab h5" ).css({ "display":"block", });	
+			$( ".not-fitness-tab h3" ).css({ "display":"block", "font-size":"22px", "letter-spacing":"1.2vw", "text-shadow": "none", });	
+			$( ".not-fitness-tab h4, .not-fitness-tab h5" ).css({ "display":"none", });	
+			$( "#hfb-movara-tabs-fitness-tab" ).css({ "padding-top":"200px", "height":"300px", "padding-bottom":"50px", });	
+			$( ".not-fitness-tab" ).css({ "padding-top":"100px", "height":"150px", "padding-bottom":"50px", });
+			});  
+
+		$( "#hfb-movara-tabs-nutrition-tab" ).click(function() {
+			$( ".active-tab" ).addClass( "inactive-tab" ).removeClass( "active-tab" );
+			$( "#hfb-movara-tabs-nutrition-tab" ).addClass( "active-tab" ).removeClass( "inactive-tab" );
+			$( "#hfb-movara-tabs-nutrition-section" ).fadeIn(300).css({"display": "block",});
+			$( ".not-nutrition" ).hide().css({"display": "none",});
+			$( " #hfb-movara-tabs-tabs-column " ).css( { "grid-template-columns": "1fr 2fr 1fr 1fr",  });
+			$( "#hfb-movara-tabs-nutrition-tab h3" ).css({ "display":"none", });	
+			$( "#hfb-movara-tabs-nutrition-tab h4, #hfb-movara-tabs-nutrition-tab h5" ).css({ "display":"block", });	
+			$( ".not-nutrition-tab h3" ).css({ "display":"block", "font-size":"22px", "letter-spacing":"1.2vw", "text-shadow": "none", });	
+			$( ".not-nutrition-tab h4, .not-nutrition-tab h5" ).css({ "display":"none", });	
+			$( "#hfb-movara-tabs-nutrition-tab" ).css({ "padding-top":"200px", "height":"300px", "padding-bottom":"50px", });	
+			$( ".not-nutrition-tab" ).css({ "padding-top":"100px", "height":"150px",  "padding-bottom":"50px", });
+			}); 
+		
+		$( "#hfb-movara-tabs-education-tab" ).click(function() {
+			$( ".active-tab" ).addClass( "inactive-tab" ).removeClass( "active-tab" );
+			$( "#hfb-movara-tabs-education-tab" ).addClass( "active-tab" ).removeClass( "inactive-tab" );
+			$( "#hfb-movara-tabs-education-section" ).fadeIn(300).css({"display": "block",});
+			$( ".not-education" ).hide().css({"display": "none",});
+			$( " #hfb-movara-tabs-tabs-column " ).css( { "grid-template-columns": "1fr 1fr 2fr 1fr", } );
+			$( "#hfb-movara-tabs-education-tab h3" ).css({ "display":"none", });	
+			$( "#hfb-movara-tabs-education-tab h4, #hfb-movara-tabs-education-tab h5" ).css({ "display":"block", });	
+			$( ".not-education-tab h3" ).css({ "display":"block", "font-size":"22px", "letter-spacing":"1.2vw", "text-shadow": "none", });	
+			$( ".not-education-tab h4, .not-education-tab h5" ).css({ "display":"none", });		
+			$( "#hfb-movara-tabs-education-tab" ).css({ "padding-top":"200px", "height":"300px", "padding-bottom":"50px", });	
+			$( ".not-education-tab" ).css({ "padding-top":"100px", "height":"150px",  "padding-bottom":"50px", });
+			});  
+
+		$( "#hfb-movara-tabs-recovery-tab" ).click(function() {
+			$( ".active-tab" ).addClass( "inactive-tab" ).removeClass( "active-tab" );
+			$( "#hfb-movara-tabs-recovery-tab" ).addClass( "active-tab" ).removeClass( "inactive-tab" );
+			$( "#hfb-movara-tabs-recovery-section" ).fadeIn(300).css({"display": "block",});
+			$( ".not-recovery" ).hide().css({"display": "none",});
+			$( " #hfb-movara-tabs-tabs-column " ).css( { "grid-template-columns": "1fr 1fr 1fr 2fr",  } );
+			$( "#hfb-movara-tabs-recovery-tab h3" ).css({ "display":"none", });	
+			$( "#hfb-movara-tabs-recovery-tab h4, #hfb-movara-tabs-recovery-tab h5" ).css({ "display":"block", });	
+			$( ".not-recovery-tab h3" ).css({ "display":"block", "font-size":"22px", "letter-spacing":"1.2vw", "text-shadow": "none", });	
+			$( ".not-recovery-tab h4, .not-recovery-tab h5" ).css({ "display":"none", });		
+			$( "#hfb-movara-tabs-recovery-tab" ).css({ "padding-top":"200px", "height":"300px", "padding-bottom":"50px", });	
+			$( ".not-recovery-tab" ).css({ "padding-top":"100px", "height":"150px", "padding-bottom":"50px",  });
+			});  
+		
+	});
+});
+</script>   
+
+<script>
+	
+//     The Program Section  -  Mobile     //
+	
+jQuery(function($){
+	$(document).ready(function(){
+		$('.hfb-movara-tabs-body-section').hide();	
+		$('#movara-program-tabs-row-mobile').css({ "width": "80%", });
+		
+
+
+		$( "#hfb-movara-tabs-fitness-tab-mobile h4, #hfb-movara-tabs-fitness-tab-mobile h5" ).css({ "display":"none", });	
+		$( "#hfb-movara-tabs-nutrition-tab-mobile h4, #hfb-movara-tabs-nutrition-tab-mobile h5" ).css({ "display":"none", });
+		$( "#hfb-movara-tabs-education-tab-mobile h4, #hfb-movara-tabs-education-tab-mobile h5" ).css({ "display":"none", });
+		$( "#hfb-movara-tabs-recovery-tab-mobile h4, #hfb-movara-tabs-recovery-tab-mobile h5" ).css({ "display":"none", });	
+
+		
+		$( "#hfb-movara-tabs-tab-section" ).css({ "margin-bottom": "150px", });
+		$( "#hfb-movara-tabs-fitness-tab-mobile, #hfb-movara-tabs-nutrition-tab-mobile, #hfb-movara-tabs-education-tab-mobile, #hfb-movara-tabs-recovery-tab-mobile" ).css({ "transition-duration":"300ms", "padding-top":"50px","padding-bottom":"50px", });
+		$( "#hfb-movara-tabs-fitness-tab-mobile h3, #hfb-movara-tabs-nutrition-tab-mobile h3, #hfb-movara-tabs-education-tab-mobile h3, #hfb-movara-tabs-recovery-tab-mobile h3" ).css({ "text-shadow": "2px 2px 4px #000000", });
+		
+		
+		$( ".inactive-tab-mobile" ).click(function() {
+			$( "#hfb-movara-tabs-tab-section" ).css({ "margin-bottom": "0px", });
+			$( '#hfb-movara-tabs-tabs-column-mobile' ).css({ "grid-template-columns":"1fr 1fr 1fr 1fr", });
+			}); 
+		
+		
+		$( "#hfb-movara-tabs-fitness-tab-mobile" ).click(function() {
+			$( ".active-tab-mobile" ).addClass( "inactive-tab-mobile" ).removeClass( "active-tab-mobile" );
+			$( "#hfb-movara-tabs-fitness-tab-mobile" ).addClass( "active-tab-mobile" ).removeClass( "inactive-tab-mobile" );	
+			$( "#hfb-movara-tabs-fitness-section" ).fadeIn(300).css({"display": "block",});
+			$( ".not-fitness" ).hide().css({"display": "none",});
+			$( "#hfb-movara-tabs-tabs-column-mobile" ).css( { "grid-template-columns": "2fr 1fr 1fr 1fr", } );
+			$( "#hfb-movara-tabs-fitness-tab-mobile h3" ).css({ "display":"none", });	
+			$( "#hfb-movara-tabs-fitness-tab-mobile h4, #hfb-movara-tabs-fitness-tab-mobile h5" ).css({ "display":"block", });	
+			$( ".not-fitness-tab-mobile h3" ).css({ "display":"block", "font-size":"22px", "letter-spacing":"10px", "text-shadow": "none", });	
+			$( ".not-fitness-tab-mobile h4, .not-fitness-tab-mobile h5" ).css({ "display":"none", });	
+			$( "#hfb-movara-tabs-fitness-tab-mobile" ).css({ "padding-top":"100px", "height":"200px", "padding-bottom":"50px", });	
+			$( ".not-fitness-tab-mobile" ).css({ "padding-top":"40px", "height":"100px", "padding-bottom":"40px", });
+			});  
+
+		$( "#hfb-movara-tabs-nutrition-tab-mobile" ).click(function() {
+			$( ".active-tab-mobile" ).addClass( "inactive-tab-mobile" ).removeClass( "active-tab-mobile" );
+			$( "#hfb-movara-tabs-nutrition-tab-mobile" ).addClass( "active-tab-mobile" ).removeClass( "inactive-tab-mobile" );
+			$( "#hfb-movara-tabs-nutrition-section" ).fadeIn(300).css({"display": "block",});
+			$( ".not-nutrition" ).hide().css({"display": "none",});
+			$( "#hfb-movara-tabs-tabs-column-mobile" ).css( { "grid-template-columns": "1fr 2fr 1fr 1fr",  });
+			$( "#hfb-movara-tabs-nutrition-tab-mobile h3" ).css({ "display":"none", });	
+			$( "#hfb-movara-tabs-nutrition-tab-mobile h4, #hfb-movara-tabs-nutrition-tab-mobile h5" ).css({ "display":"block", });
+			$( ".not-nutrition-tab-mobile h3" ).css({ "display":"block", "font-size":"22px", "letter-spacing":"10px", "text-shadow": "none", });	
+			$( ".not-nutrition-tab-mobile h4, .not-nutrition-tab-mobile h5" ).css({ "display":"none", });	
+			$( "#hfb-movara-tabs-nutrition-tab-mobile" ).css({ "padding-top":"100px", "height":"200px", "padding-bottom":"50px", });	
+			$( ".not-nutrition-tab-mobile" ).css({ "padding-top":"40px", "height":"100px", "padding-bottom":"40px", });
+			}); 
+		
+		$( "#hfb-movara-tabs-education-tab-mobile" ).click(function() {
+			$( ".active-tab-mobile" ).addClass( "inactive-tab-mobile" ).removeClass( "active-tab-mobile" );
+			$( "#hfb-movara-tabs-education-tab-mobile" ).addClass( "active-tab-mobile" ).removeClass( "inactive-tab-mobile" );
+			$( "#hfb-movara-tabs-education-section" ).fadeIn(300).css({"display": "block",});
+			$( ".not-education" ).hide().css({"display": "none",});
+			$( " #hfb-movara-tabs-tabs-column-mobile " ).css( { "grid-template-columns": "1fr 1fr 2fr 1fr", } );
+			$( "#hfb-movara-tabs-education-tab-mobile h3" ).css({ "display":"none", });	
+			$( "#hfb-movara-tabs-education-tab-mobile h4, #hfb-movara-tabs-education-tab-mobile h5" ).css({ "display":"block", });
+			$( ".not-education-tab-mobile h3" ).css({ "display":"block", "font-size":"22px", "letter-spacing":"10px", "text-shadow": "none", });	
+			$( ".not-education-tab-mobile h4, .not-education-tab-mobile h5" ).css({ "display":"none", });		
+			$( "#hfb-movara-tabs-education-tab-mobile" ).css({ "padding-top":"100px", "height":"200px", "padding-bottom":"50px", });	
+			$( ".not-education-tab-mobile" ).css({ "padding-top":"40px", "height":"100px", "padding-bottom":"40px", });
+			});  
+
+		$( "#hfb-movara-tabs-recovery-tab-mobile" ).click(function() {
+			$( ".active-tab-mobile" ).addClass( "inactive-tab-mobile" ).removeClass( "active-tab-mobile" );
+			$( "#hfb-movara-tabs-recovery-tab-mobile" ).addClass( "active-tab-mobile" ).removeClass( "inactive-tab-mobile" );
+			$( "#hfb-movara-tabs-recovery-section" ).fadeIn(300).css({"display": "block",});
+			$( ".not-recovery" ).hide().css({"display": "none",});
+			$( " #hfb-movara-tabs-tabs-column-mobile " ).css( { "grid-template-columns": "1fr 1fr 1fr 2fr",  } );
+			$( "#hfb-movara-tabs-recovery-tab-mobile h3" ).css({ "display":"none", });	
+			$( "#hfb-movara-tabs-recovery-tab-mobile h4, #hfb-movara-tabs-recovery-tab-mobile h5" ).css({ "display":"block", });
+			$( ".not-recovery-tab-mobile h3" ).css({ "display":"block", "font-size":"22px", "letter-spacing":"10px", "text-shadow": "none", });	
+			$( ".not-recovery-tab-mobile h4, .not-recovery-tab-mobile h5" ).css({ "display":"none", });		
+			$( "#hfb-movara-tabs-recovery-tab-mobile" ).css({ "padding-top":"100px", "height":"200px", "padding-bottom":"50px", });
+			$( ".not-recovery-tab-mobile" ).css({ "padding-top":"40px", "height":"100px", "padding-bottom":"40px", });
+			});  
+		
+		$(".inactive-tab-mobile").click(function(e) {
+    		e.preventDefault();
+    		var aid = $(this).attr("href");
+   			$('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+			});
+		
+	});
+});
+</script>
+
+
+
+
+
+
+<script>
+
+//     Our Resort - Available Rooms Popup     //
+	
+	jQuery(function($){
+	$(document).ready(function(){
+		
+		
+		$( "#single-king-room" ).css({ "border-bottom": "solid #32abcd 5px", });
+		$( "#double-queen-room-slider" ).hide();
+		$( '#double-queen-room-image' ).hide();
+		$( "#double-queen-room-text" ).hide();
+		
+		$( "#single-king-room" ).click(function() {
+			$( '#double-queen-room-image' ).hide();
+			$( '#single-king-room-image' ).show();
+			$( "#single-king-room" ).css({ "border-bottom": "solid #32abcd 5px", });
+			$( "#double-queen-room" ).css({ "border-bottom": "none", });
+			$( "#single-king-room-slider" ).show();
+			$( "#double-queen-room-slider" ).hide();
+			$( "#single-king-room-text" ).show();
+			$( "#double-queen-room-text" ).hide();
+			});  
+		
+		$( "#double-queen-room" ).click(function() {
+			$( '#double-queen-room-image' ).show();
+			$( '#single-king-room-image' ).hide();
+			$( "#double-queen-room" ).css({ "border-bottom": "solid #32abcd 5px", });
+			$( "#single-king-room" ).css({ "border-bottom": "none", });
+			$( "#double-queen-room-slider" ).show();
+			$( "#single-king-room-slider" ).hide();
+			$( "#double-queen-room-text" ).show();
+			$( "#single-king-room-text" ).hide();
+			});
+
+	});
+});
+	
+	
+</script> 
+
+
+<script>
+	
+//  The Program Page - Icons (Desktop)   //
+
+jQuery(function($){
+	$(document).ready(function(){
+		
+		$(' #icon-text-3, #icon-text-4, #icon-text-5, #icon-text-6, #icon-text-7, #icon-text-8, #icon-text-9, #icon-text-10, #icon-text-10, #icon-text-11, #icon-text-12').hide();
+
+			
+		$( "#icon-2" ).hover(function() {
+			$( '#icon-text-2' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-2" ).hide();
+			});	
+			
+		$( "#icon-3" ).hover(function() {
+			$( '#icon-text-3' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-3" ).hide();
+			});	
+				
+		$( "#icon-4" ).hover(function() {
+			$( '#icon-text-4' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-4" ).hide();
+			});	
+					
+		$( "#icon-5" ).hover(function() {
+			$( '#icon-text-5' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-5" ).hide();
+			});	
+		
+		$( "#icon-6" ).hover(function() {
+			$( '#icon-text-6' ).show();
+			$( '.icons-text-box>div div' ).not( "#icon-text-6" ).hide();
+			});	
+			
+		$( "#icon-7" ).hover(function() {
+			$( '#icon-text-7' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-7" ).hide();
+			});	
+			
+		$( "#icon-8" ).hover(function() {
+			$( '#icon-text-8' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-8" ).hide();
+			});	
+				
+		$( "#icon-9" ).hover(function() {
+			$( '#icon-text-9' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-9" ).hide();
+			});	
+					
+		$( "#icon-10" ).hover(function() {
+			$( '#icon-text-10' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-10" ).hide();
+			});	
+		
+		$( "#icon-11" ).hover(function() {
+			$( '#icon-text-11' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-11" ).hide();
+			});
+		
+		$( "#icon-12" ).hover(function() {
+			$( '#icon-text-12' ).show();
+			$( '.icons-text-box>div  div' ).not( "#icon-text-12" ).hide();
+			});	
+		
+	});
+});
+</script> 
+
+
+
+<script>
+	
+//  The Program Page - Icons (Mobile)   //
+
+jQuery(function($){
+	$(document).ready(function(){
+		
+		$(' #mobile-icon-text-3, #mobile-icon-text-4, #mobile-icon-text-5, #mobile-icon-text-6, #mobile-icon-text-7, #mobile-icon-text-8, #mobile-icon-text-9, #mobile-icon-text-10, #mobile-icon-text-10, #mobile-icon-text-11, #mobile-icon-text-12').hide();
+
+			
+		$( "#mobile-icon-2" ).click(function() {
+			$( '#mobile-icon-text-2' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-2" ).hide();
+			});	
+			
+		$( "#mobile-icon-3" ).click(function() {
+			$( '#mobile-icon-text-3' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-3" ).hide();
+			});	
+				
+		$( "#mobile-icon-4" ).click(function() {
+			$( '#mobile-icon-text-4' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-4" ).fadeOut();
+			});	
+					
+		$( "#mobile-icon-5" ).hover(function() {
+			$( '#mobile-icon-text-5' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-5" ).hide();
+			});	
+		
+		$( "#mobile-icon-6" ).click(function() {
+			$( '#mobile-icon-text-6' ).fadeIn();
+			$( '.mobile-icons-text-box>div div' ).not( "#mobile-icon-text-6" ).hide();
+			});	
+			
+		$( "#mobile-icon-7" ).click(function() {
+			$( '#mobile-icon-text-7' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-7" ).hide();
+			});	
+			
+		$( "#mobile-icon-8" ).click(function() {
+			$( '#mobile-icon-text-8' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-8" ).hide();
+			});	
+				
+		$( "#mobile-icon-9" ).hover(function() {
+			$( '#mobile-icon-text-9' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-9" ).hide();
+			});	
+					
+		$( "#mobile-icon-10" ).click(function() {
+			$( '#mobile-icon-text-10' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-10" ).hide();
+			});	
+		
+		$( "#mobile-icon-11" ).click(function() {
+			$( '#mobile-icon-text-11' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-11" ).hide();
+			});
+		
+		$( "#mobile-icon-12" ).click(function() {
+			$( '#mobile-icon-text-12' ).fadeIn();
+			$( '.mobile-icons-text-box>div  div' ).not( "#mobile-icon-text-12" ).hide();
+			});	
+		
+	});
+});
+</script> 
+
+<script>
+jQuery(function($){
+	$(document).ready(function(){
+  		
+		
+		$('.tp-fitness-inactive').hide();
+	
+		
+		$( "#carousel-fitness-morning-stretch .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-morning-stretch').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-yoga-stretch .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-yoga-stretch').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-stretch .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-stretch').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-mobility .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-mobility').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-mountain .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-mountain').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-cardio-intervals .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-cardio-intervals').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-treading .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-treading').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-cinco-speed .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-cinco-speed').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-pool-classes .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-pool-classes').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-amrap .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-amrap').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-bootcamp .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-bootcamp').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-body-blast .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-body-blast').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-trx .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-trx').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-circuit .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-circuit').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-pilates .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-pilates').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-core .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-core').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-hip-hop .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-hip-hop').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-zumba .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-zumba').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-barre .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-barre').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-last-blast .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-last-blast').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+	});
+});
+</script>
+
+
+<script>
+jQuery(function($){
+	$(document).ready(function(){
+  		
+		
+		$('.tp-recovery-inactive').hide();
+		
+		
+		$( "#carousel-recovery-facials .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-facials').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-nails .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-nails').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-waxing-tinting .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-waxing-tinting').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-accupuncture .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-accupuncture').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-holistic-chiropractic-treatment .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-holistic-chiropractic-treatment').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-swedish-massage .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-swedish-massage').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-deep-tissue-massage .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-deep-tissue-massage').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-body-wrap .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-body-wrap').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		
+		$( "#carousel-recovery-body-polish .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-body-polish').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-hanakasumi .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-hanakasumi').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-lomi-lomi-massage .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-lomi-lomi-massage').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-raindrop-swedish-massage .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-raindrop-swedish-massage').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 		
+		
+		$( "#carousel-recovery-hot-stone-massage .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-hot-stone-massage').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-fascia-cellulite-smoothing-massage .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-fascia-cellulite-smoothing-massage').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-reflexology .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-reflexology').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-muscle-activation-technique .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-muscle-activation-technique').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+		$( "#carousel-recovery-iv-vitamin-therapy .et_pb_module_inner" ).click(function() {
+			$('.tp-recovery-active').addClass('tp-recovery-inactive').hide().removeClass('tp-recovery-active');
+			$('#tp-recovery-iv-vitamin-therapy').show().addClass('tp-recovery-active').removeClass('tp-recovery-inactive');
+   		}); 
+		
+			
+	});
+});
+</script>
+
+
+
+
+
+<script>
+jQuery(function($){
+	$(document).ready(function(){
+  		
+		
+		$('.tp-education-inactive').hide();
+		
+		
+		$( "#carousel-education-healing-connection .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-healing-connection').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-mindfulness .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-mindfulness').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-stress-management .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-stress-management').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-life-balance .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-life-balance').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-nutrient-density .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-nutrient-density').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-macros-and-labels .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-macros-and-labels').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-the-plate-method .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-the-plate-method').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-nutritional-imbalances .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-nutritional-imbalances').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-mini-habits .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-mini-habits').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-the-brain-wellness-connection .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-the-brain-wellness-connection').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-positive-emotions .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-positive-emotions').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-building-stress-resilience .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-building-stress-resilience').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-the-movara-way .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-the-movara-way').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 
+		
+		$( "#carousel-education-fitness-tips .et_pb_module_inner" ).click(function() {
+			$('.tp-education-active').addClass('tp-education-inactive').hide().removeClass('tp-education-active');
+			$('#tp-education-fitness-tips').show().addClass('tp-education-active').removeClass('tp-education-inactive');
+   		}); 	
+	});
+});
+</script>
+
+
+
+<script>
+jQuery(function($){
+	$(document).ready(function(){
+	
+		$( '.home-transformation' ).hide();
+		
+		$( "#home-reset-tab" ).click(function() {
+			$('.home-reset').show();
+			$('.home-transformation').hide();
+			$('#home-reset-tab').addClass('home-active-tab').removeClass('home-inactive-tab');
+			$('#home-transformation-tab').addClass('home-inactive-tab').removeClass('home-active-tab');
+		});
+		
+		$( '#home-transformation-tab' ).click(function() {
+			$('.home-reset').hide();
+			$('.home-transformation').show();
+			$('#home-transformation-tab').addClass('home-active-tab').removeClass('home-inactive-tab');
+			$('#home-reset-tab').addClass('home-inactive-tab').removeClass('home-active-tab');
+		});
+		
+	});
+});
+</script>
