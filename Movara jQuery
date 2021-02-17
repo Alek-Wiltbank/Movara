@@ -2,46 +2,6 @@
 
 
 
-<script>
-
-//     Our Resort - Available Rooms Popup     //
-	
-	jQuery(function($){
-	$(document).ready(function(){
-		
-		
-		$( "#single-king-room" ).css({ "border-bottom": "solid #32abcd 5px", });
-		$( "#double-queen-room-slider" ).hide();
-		$( '#double-queen-room-image' ).hide();
-		$( "#double-queen-room-text" ).hide();
-		
-		$( "#single-king-room" ).click(function() {
-			$( '#double-queen-room-image' ).hide();
-			$( '#single-king-room-image' ).show();
-			$( "#single-king-room" ).css({ "border-bottom": "solid #32abcd 5px", });
-			$( "#double-queen-room" ).css({ "border-bottom": "none", });
-			$( "#single-king-room-slider" ).show();
-			$( "#double-queen-room-slider" ).hide();
-			$( "#single-king-room-text" ).show();
-			$( "#double-queen-room-text" ).hide();
-			});  
-		
-		$( "#double-queen-room" ).click(function() {
-			$( '#double-queen-room-image' ).show();
-			$( '#single-king-room-image' ).hide();
-			$( "#double-queen-room" ).css({ "border-bottom": "solid #32abcd 5px", });
-			$( "#single-king-room" ).css({ "border-bottom": "none", });
-			$( "#double-queen-room-slider" ).show();
-			$( "#single-king-room-slider" ).hide();
-			$( "#double-queen-room-text" ).show();
-			$( "#single-king-room-text" ).hide();
-			});
-
-	});
-});
-	
-	
-</script> 
 
 
 <script>
