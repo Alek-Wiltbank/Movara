@@ -1,0 +1,110 @@
+<script>
+jQuery(function($){
+	$(document).ready(function(){
+  		
+		
+		$('.tp-fitness-inactive').hide();
+	
+		
+		$( "#carousel-fitness-morning-stretch .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-morning-stretch').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-yoga-stretch .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-yoga-stretch').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-stretch .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-stretch').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-mobility .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-mobility').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-mountain .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-mountain').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-cardio-intervals .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-cardio-intervals').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-treading .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-treading').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-cinco-speed .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-cinco-speed').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-pool-classes .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-pool-classes').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-amrap .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-amrap').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-bootcamp .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-bootcamp').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-body-blast .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-body-blast').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-trx .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-trx').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-circuit .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-circuit').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-pilates .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-pilates').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-core .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-core').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-hip-hop .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-hip-hop').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-zumba .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-zumba').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-barre .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-barre').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+		
+		$( "#carousel-fitness-last-blast .et_pb_module_inner" ).click(function() {
+			$('.tp-fitness-active').addClass('tp-fitness-inactive').hide().removeClass('tp-fitness-active');
+			$('#tp-fitness-last-blast').show().addClass('tp-fitness-active').removeClass('tp-fitness-inactive');
+   		}); 
+	});
+});
+</script>
