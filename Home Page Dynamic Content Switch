@@ -1,0 +1,23 @@
+<script>
+jQuery(function($){
+	$(document).ready(function(){
+	
+		$( '.home-transformation' ).hide();
+		
+		$( "#home-reset-tab" ).click(function() {
+			$('.home-reset').show();
+			$('.home-transformation').hide();
+			$('#home-reset-tab').addClass('home-active-tab').removeClass('home-inactive-tab');
+			$('#home-transformation-tab').addClass('home-inactive-tab').removeClass('home-active-tab');
+		});
+		
+		$( '#home-transformation-tab' ).click(function() {
+			$('.home-reset').hide();
+			$('.home-transformation').show();
+			$('#home-transformation-tab').addClass('home-active-tab').removeClass('home-inactive-tab');
+			$('#home-reset-tab').addClass('home-inactive-tab').removeClass('home-active-tab');
+		});
+		
+	});
+});
+</script>
