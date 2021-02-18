@@ -1,0 +1,17 @@
+<!-- Weekly Progress Bars - Removes date from name  -->
+<script>
+	jQuery(function($){
+		$(document).ready(function(){	
+			$('.weekly_progress_bars .entry-title').each(function(){
+				element = $(this).html();   
+				$(this).html(element.substring(8));	
+			});
+			
+			$('.weekly_progress_bars .ld-progress-percentage').each(function(){
+				element = $(this).html();   
+				$(this).html(element.substring(0, element.length - 14));
+			});
+		
+		});
+	});
+</script>
